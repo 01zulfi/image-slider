@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow-container {
+  border: 10px solid black;
+  width: 75vw;
+}
+
+.image-container {
+  width: 75vw;
+}
+
+img {
+  width: inherit;
+}
+
+.left-and-right-buttons {
+  position: absolute;
+  top: 7em;
+  display: flex;
+  width: 75vw;
+  justify-content: center;
+}
+
+.left-and-right-buttons div {
+  background-color: ivory;
+  border: 2px solid black;
+  padding: 25px;
+  width: fit-content;
+}
+
+.left-and-right-buttons .right-button {
+  margin-left: auto;
+}
+
+.nav-buttons button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  clip-path: circle(40%);
+  background-color: black;
+  transition: background-color 100ms ease;
+}
+
+.nav-buttons button:focus {
+  background-color: gray;
+}
