@@ -1,10 +1,12 @@
 const allImages = document.querySelectorAll(".image-container");
 const navButtons = document.querySelectorAll(".nav-buttons");
+const navButtonsDiv = document.querySelector(".nav-buttons-div");
 const previousButton = document.querySelector(".left-button");
 const forwardButton = document.querySelector(".right-button");
 
 forwardButton.addEventListener("click", forwardClickHandler);
 previousButton.addEventListener("click", backwardClickHandler);
+navButtonsDiv.addEventListener("click", jumpToSlide);
 
 let imageTimer = setInterval(autoSlideShow, 5000);
 
@@ -85,4 +87,13 @@ function moveNavButtonsBackward() {
       return;
     }
   }
+}
+
+function jumpToSlide(event) {
+  navButtons.forEach((button) => button.classList.remove("active"));
+  event.target.classList.add("active");
+  allImages.forEach((image) => image.classList.remove("active"));
+  allImages[event.target.getAttribute("data-id")].classList.add("active");
+  clearInterval(imageTimer);
+  imageTimer = setInterval(autoSlideShow, 5000);
 }
