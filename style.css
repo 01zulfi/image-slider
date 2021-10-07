@@ -23,6 +23,17 @@ body {
 
 .image-container.active {
   display: block;
+  animation: sliding;
+  animation-duration: 150ms;
+}
+
+@keyframes sliding {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .left-and-right-buttons {
@@ -63,9 +74,9 @@ body {
   height: 30px;
   clip-path: circle(40%);
   background-color: black;
-  transition: background-color 100ms ease;
+  transition: background-color 150ms ease;
 }
 
-.nav-buttons-div button:focus {
+.nav-buttons-div button.active {
   background-color: gray;
 }
