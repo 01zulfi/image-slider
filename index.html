@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Slider</title>
     <link href="style.css" rel="stylesheet" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="slideshow-container">
       <div class="all-images-container">
-        <div class="image-container">
+        <div class="image-container active">
           <img src="images/imageOne.jpg" />
         </div>
-        <!-- <div class="image-container">
+        <div class="image-container">
           <img src="images/imageTwo.jpg" />
         </div>
         <div class="image-container">
@@ -25,7 +25,7 @@
         </div>
         <div class="image-container">
           <img src="images/imageFive.jpg" />
-        </div> -->
+        </div>
       </div>
       <div class="left-and-right-buttons">
         <div class="left-button">
@@ -35,10 +35,12 @@
           <img src="icons/arrowForward.svg" />
         </div>
       </div>
-      <div class="nav-buttons">
-        <button></button>
-        <button></button>
-        <button></button>
+      <div class="nav-buttons-div">
+        <button class="nav-buttons"></button>
+        <button class="nav-buttons"></button>
+        <button class="nav-buttons"></button>
+        <button class="nav-buttons"></button>
+        <button class="nav-buttons"></button>
       </div>
     </div>
   </body>

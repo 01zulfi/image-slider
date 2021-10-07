@@ -9,35 +9,56 @@ body {
   width: 75vw;
 }
 
-.image-container {
+.all-images-container {
   width: 75vw;
 }
 
-img {
-  width: inherit;
+.image-container img {
+  width: 75vw;
+}
+
+.image-container {
+  display: none;
+}
+
+.image-container.active {
+  display: block;
 }
 
 .left-and-right-buttons {
   position: absolute;
-  top: 7em;
+  top: 10em;
   display: flex;
   width: 75vw;
   justify-content: center;
 }
 
+.left-and-right-buttons div:hover {
+  background-color: white;
+  opacity: 1;
+}
+
 .left-and-right-buttons div {
   background-color: ivory;
-  border: 2px solid black;
-  padding: 25px;
+  opacity: 0.5;
+  padding: 10px;
   width: fit-content;
+  border-radius: 10px;
 }
 
 .left-and-right-buttons .right-button {
   margin-left: auto;
 }
 
-.nav-buttons button {
-  position: absolute;
+.nav-buttons-div {
+  width: 75vw;
+  position: relative;
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-buttons-div button {
   width: 30px;
   height: 30px;
   clip-path: circle(40%);
@@ -45,6 +66,6 @@ img {
   transition: background-color 100ms ease;
 }
 
-.nav-buttons button:focus {
+.nav-buttons-div button:focus {
   background-color: gray;
 }
